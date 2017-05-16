@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+        <meta charset="utf-8">
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link href="Style.css" rel="stylesheet" property="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="User.js"></script>
+        
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse fixed-top shadowed">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="Index.html">Mobile Hero</a>
+            </div>
+        </nav>
+        
+        <div class="container-fluid">
+            
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="content">
+                        <p class ="pritext"><b>The great mobile adventure</b></p>
+                        <p class="sectext">Hoards of monsters have attacked the fields! You must dispatch of them before they eat all of the corn! To damage a monster, simply tap on them or shake your device. When a monster dies you will recieves some schmeckles. Schmeckles can be used in the black market to buy new weapons.</p>
+                        <p class="pritext"><b>Mobile Orientation</b></p>
+                        <p class="sectext"><b>Portrait</b> -  Enter the fields<br/>
+                            <b>Landscape</b> - Enter the black market<br/></p>
+                            <p class="hint">To swap mode simply rotate your device in game.</p>
+                        <button type="button" 
+                            id="showLicense" 
+                            class="btn btn-primary sectext shadowed" 
+                            title="<b class='pritext'>License</b>" 
+                            data-toggle="popover" 
+                            data-placement="bottom"     
+                            data-content="Monsters and background are made by <a href='http://www.freepik.com' title='Freepik'>Freepik</a> from <a href='http://www.flaticon.com' title='Flaticon'>www.flaticon.com</a> Licensed by <a href='http://creativecommons.org/licenses/by/3.0/' title='Creative Commons BY 3.0' target='_blank'>CC 3.0 BY</a>">License
+                        </button>   
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-xs-12">
+                    <div class="content">
+                        <p class="priText"><b>First time here? Choose your name before you start your adventure!</b></p>
+                        <form>
+                            <input type="text" id="username"/>
+                            <br><br/><button type="button" onclick="connect();" class="btn btn-success shadowed">Set name</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-xs-12">
+                    <a href="Game.html" id="playBtn" class="btn btn-success btn-block launchBtn shadowed">Launch Game</a>
+                </div>
+            </div>
+            
+        </div>
+        <script>
+            $(document).ready(function(){
+                $('[data-toggle="popover"]').popover({html:true});
+            });
+        </script>   
+    </body>
+</html>

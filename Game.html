@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link href="Style.css" rel="stylesheet" property="stylesheet" />
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+        <script src="https://cdn.rawgit.com/HGustavs/Shaker.js/master/shaker.js"></script>
+        
+        <script src="Game.js"></script>
+        <script src="Monster.js"></script>
+        <script src="Interface.js"></script>
+        <script src="Clicks.js"></script>
+        <script src="Math.js"></script>
+        <script src="Weapons.js"></script>
+        
+    </head>
+    <body onload="running();">
+        <!--Navigation-->
+        <nav class="navbar navbar-inverse fixed-top shadowed">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="Index.html">Mobile Hero</a>
+            </div>
+        </nav>
+        
+        <div class="container-fluid">
+            <!--Shopruta (landscape)-->
+            <div id="shop" class="shopWindow shadowed">
+                <h3 class="center">Black Market</h3>
+                <span id="items"></span>
+            </div>
+            
+            <!--Spelruta (portrait)-->
+            <div id="game" class="gameWindow">
+                <a href="Index.html" id="returnBtn"><i class="glyphicon glyphicon-remove"></i></a>
+                <img id="BG1" class="landscape" src="./Maps/Map1.png"/>
+                <!--<span id="monsterName" class="center">Loading...</span>-->
+                <div class="progress">
+                   <div id="healthbar" class="progress-bar" role="progressbar" style="height: 20px;"><span id="healthpoints"></span></div>
+                </div>
+                <img id="current" class="sprite"/>
+            </div><br/>
+            
+
+            <!--Visar karaktärens attribut-->
+            <div class="statWindow shadowed">
+                <b>
+                    <p id="statName" class="center"></p>
+                    <p id="statLevel"></p>
+                    <p id="statMoney"></p>
+                    <p id="statWeapon"></p>
+                    <div class="progress">
+                        <div id="XPbar" class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar"><span id="statXP"></span></div>
+                    </div>
+                    <!--Reset
+                    <button id="refresh" class="btn btn-danger" onclick="clearStorage();">Reset progress</button>-->
+                </b>
+            </div>  
+        </div>
+    </body>
+</html>
